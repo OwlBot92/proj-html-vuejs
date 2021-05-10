@@ -1,0 +1,23 @@
+
+header{
+    /* test */
+    height: 400px;
+    width: 100%;
+    /*  */
+    background-color: $amour;
+    background-image: url("../img/background-pattern-wavify.png");
+
+    /* nav */
+    nav{
+        @include flex-between;
+
+        
+        .nav-content-links,
+        .nav-social-links{
+            ul{
+                @include flex-around;
+            }
+        }
+    }
+}
+

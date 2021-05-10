@@ -1,3 +1,4 @@
+/*
 const { vue } = require("laravel-mix");
 
 var app = new vue({
@@ -34,4 +35,4 @@ var app = new vue({
     },
     methods: {
     }
-});
+});*/

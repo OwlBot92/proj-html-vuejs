@@ -19,6 +19,11 @@ button {
   padding: 5px;
 }
 
+.centered-box {
+  width: 75%;
+  margin: auto;
+}
+
 /* Colors */
 /* color cube */
 /* median cut */
@@ -26,3 +31,23 @@ button {
 /* FLEX MIXINS */
 /* PADDING MIXINS */
 /* MARGIN MIXINS */
+header {
+  /* test */
+  height: 400px;
+  width: 100%;
+  /*  */
+  background-color: #fcf7fb;
+  background-image: url("../img/background-pattern-wavify.png");
+  /* nav */
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .nav-content-links ul,
+header nav .nav-social-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
