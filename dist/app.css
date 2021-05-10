@@ -20,34 +20,143 @@ button {
 }
 
 .centered-box {
-  width: 75%;
+  width: 70%;
   margin: auto;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Colors */
+/* font */
 /* color cube */
 /* median cut */
 /* material design */
+/* font family */
+/* font size */
 /* FLEX MIXINS */
 /* PADDING MIXINS */
 /* MARGIN MIXINS */
 header {
-  /* test */
-  height: 400px;
-  width: 100%;
-  /*  */
   background-color: #fcf7fb;
   background-image: url("../img/background-pattern-wavify.png");
+  overflow: hidden;
   /* nav */
 }
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
+}
+header nav .nav-logo-link {
+  width: 20%;
+}
+header nav .nav-logo-link img {
+  width: 80%;
+  min-width: 100px;
+}
+header nav .nav-content-links {
+  width: 80%;
+  padding: 0 10%;
+}
+header nav .nav-social-links {
+  width: 20%;
+  padding-left: 7%;
 }
 header nav .nav-content-links ul,
 header nav .nav-social-links ul {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+header nav .nav-content-links ul li,
+header nav .nav-social-links ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .nav-content-links ul li span,
+header nav .nav-social-links ul li span {
+  font-family: "Montserrat", sans-serif;
+  color: #3f3a64;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+header nav .nav-content-links ul li .fa-chevron-down,
+header nav .nav-social-links ul li .fa-chevron-down {
+  color: #3f3a64;
+  font-size: 10px;
+}
+header nav .nav-content-links ul li .social-icon,
+header nav .nav-social-links ul li .social-icon {
+  color: #333333;
+  font-size: 16px;
+}
+header .jumbotron {
+  display: flex;
+  position: relative;
+}
+header .jumbotron .left-jumbo {
+  width: 40%;
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+header .jumbotron .left-jumbo h6 {
+  font-family: "Montserrat";
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+header .jumbotron .left-jumbo h1 {
+  font-family: "Playfair Display";
+  font-size: 40px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+header .jumbotron .left-jumbo p {
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: #333333;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+header .jumbotron .left-jumbo button {
+  background-color: #20ac97;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 800;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 4px;
+  transition: 0.3s all;
+}
+header .jumbotron .left-jumbo button i {
+  margin-left: 5px;
+}
+header .jumbotron .left-jumbo button:hover {
+  background-color: #3f3a64;
+}
+header .jumbotron .right-jumbo {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 60%;
+}
+header .jumbotron .right-jumbo #hero-img {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  right: 10%;
+  max-width: 360px;
+  min-width: 300px;
+}
+header .jumbotron .right-jumbo #shape-face {
+  position: absolute;
+  width: 65%;
+  right: 0%;
+  bottom: -8%;
 }

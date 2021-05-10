@@ -1,23 +1,122 @@
 
 header{
-    /* test */
-    height: 400px;
-    width: 100%;
-    /*  */
+   
     background-color: $amour;
     background-image: url("../img/background-pattern-wavify.png");
-
+    overflow: hidden;
     /* nav */
     nav{
         @include flex-between;
+        padding: 10px 0;
+        .nav-logo-link{
+            width: 20%;
+            img{
+                width: 80%;
+                min-width: 100px;
+            }
+        }
 
-        
+        .nav-content-links{
+            width: 80%;
+            padding: 0 10%;
+        }
+        .nav-social-links{
+            width: 20%;
+            padding-left: 7%;
+        }
+
         .nav-content-links,
         .nav-social-links{
             ul{
-                @include flex-around;
+                @include flex-between;
+                li{
+                    @include flex-center;
+                    span{
+                        font-family: $sans-serif-mont, sans-serif;
+                        color: $blue-j;
+                        font-size: $f-size-small;
+                        font-weight: 600;
+                        margin-right: 4px;
+                    }
+                    .fa-chevron-down{
+                        color: $blue-j;
+                        font-size: $f-size-xs;
+                    }
+                    .social-icon{
+                        color: $dark-grey;
+                        font-size: $f-size-standard;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    .jumbotron{
+        display: flex;
+        position: relative;
+        .left-jumbo{
+            width: 40%;
+            padding-bottom: 80px;
+            padding-top: 40px;
+            h6 {
+                font-family: $sans-serif-mont;
+                color: $dark-grey;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            h1{
+                font-family: $serif-playfair;
+                font-size: $f-size-extraExtraLarge;
+                color: $dark-grey;
+                margin-bottom: 20px;
+            }
+            p{
+                font-family: $sans-serif-mont;
+                font-size: $f-size-small;
+                color: $dark-grey;
+                font-weight: 500;
+                line-height: 25px;
+                margin-bottom: 30px;
+            }
+            button{
+                background-color: $mountain-meadow;
+                font-family: $sans-serif-mont;
+                font-size: $f-size-xs;
+                font-weight: 800;
+                color: white;
+                padding: 12px 35px;
+                border-radius: 4px;
+                transition: .3s all;
+                i{
+                    margin-left: 5px;
+                }
+                &:hover{
+                    background-color: #3f3a64;
+                }
+            }
+            
+        }
+
+        .right-jumbo{
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            width: 60%;
+            #hero-img{
+                position: absolute;
+                bottom: 0;
+                width: 60%;
+                right: 10%;
+                max-width: 360px;
+                min-width: 300px;
+            }
+            #shape-face{
+                position: absolute;
+                width: 65%;
+                right: 0%;
+                bottom: -8%;
             }
         }
     }
 }
-
