@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Colors */
+/* color cube */
+/* median cut */
+/* material design */
+/* FLEX MIXINS */
+/* PADDING MIXINS */
+/* MARGIN MIXINS */
