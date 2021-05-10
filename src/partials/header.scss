@@ -4,6 +4,7 @@ header{
     background-color: $amour;
     background-image: url("../img/background-pattern-wavify.png");
     overflow: hidden;
+    
     /* nav */
     nav{
         @include flex-between;
@@ -51,7 +52,7 @@ header{
         }
     }
 
-    
+    /* jumbotron */
     .jumbotron{
         display: flex;
         position: relative;
