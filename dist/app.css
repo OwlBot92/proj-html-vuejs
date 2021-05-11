@@ -418,7 +418,7 @@ main .courses-section .courses-cards-box .courses-row-two .card:hover {
 }
 main .books-collab-section {
   padding-top: 60px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   /* book section */
   /* partners section */
 }
@@ -556,4 +556,78 @@ main .books-collab-section .collab-sect ul li img {
 main .books-collab-section .collab-sect ul li img:hover {
   filter: saturate(100%);
   opacity: 1;
+}
+main .reviews-section {
+  display: flex;
+  margin-bottom: 100px;
+  position: relative;
+}
+main .reviews-section .left-rev-side {
+  width: 50%;
+  flex-direction: column;
+  padding: 60px 120px;
+  text-align: center;
+  background-color: #fcf7fb;
+  background-image: url("../img/background-pattern-wavify.png");
+}
+main .reviews-section .left-rev-side h4 {
+  color: #20ac97;
+  font-family: "Montserrat";
+  font-weight: 600;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+main .reviews-section .left-rev-side p {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #333333;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 40px;
+}
+main .reviews-section .left-rev-side img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+main .reviews-section .left-rev-side h3 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #333333;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+main .reviews-section .left-rev-side h5 {
+  font-family: "Montserrat";
+  color: #6b6c6c;
+  font-size: 10px;
+  font-weight: 600;
+}
+main .reviews-section .right-rev-side {
+  width: 50%;
+  background-image: url("../img/home-movation-testimonial-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -50px;
+}
+main .reviews-section .picker-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+main .reviews-section .picker-circle span {
+  margin: 10px;
+  font-family: "Montserrat";
+}
+main .reviews-section .picker-circle img {
+  cursor: pointer;
 }

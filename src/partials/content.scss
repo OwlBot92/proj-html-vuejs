@@ -235,7 +235,7 @@ main{
     /* books/collaboration section */
     .books-collab-section{
         padding-top: 60px;
-        padding-bottom: 80px;
+        padding-bottom: 60px;
 
         /* book section */
         .book-sect{
@@ -379,6 +379,85 @@ main{
 
     /* reviews section */
     .reviews-section{
-        
+        display: flex;
+        margin-bottom:100px;
+        position: relative;
+
+        .left-rev-side{
+            width: 50%;
+            flex-direction: column;
+            padding: 60px 120px;
+            text-align: center;
+            background-color: $amour;
+            background-image: url("../img/background-pattern-wavify.png");
+            
+            h4{
+                color: $mountain-meadow;
+                font-family: $sans-serif-mont;
+                font-weight: 600;
+                padding-bottom: 50px;
+                text-transform: uppercase;
+            }
+            p{  
+                font-family: $sans-serif-mont;
+                font-size: $f-size-standard;
+                color: $dark-grey;
+                font-weight: 600;
+                line-height: 30px;
+                padding-bottom: 40px;
+            }
+            img{
+                width: 80px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+            h3{
+                font-family: $sans-serif-mont;
+                font-size: $f-size-standard;
+                color: $dark-grey;
+                padding-bottom: 10px;
+                font-weight: 600;
+            }
+            h5{
+                font-family: $sans-serif-mont;
+                color: $cordouray;
+                font-size: $f-size-xs;
+                font-weight: 600;
+            }
+        }
+
+        .right-rev-side{
+            width: 50%;
+            background-image: url("../img/home-movation-testimonial-image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -50px;
+        }
+
+        .picker-circle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: white;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            span{
+                margin: 10px;
+                font-family: $sans-serif-mont;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
     }
 }
+
+
