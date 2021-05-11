@@ -139,6 +139,84 @@
                         <h6>Win<span id="special-char">G</span><span>man</span></h6>
                     </div>
                 </section>
+
+                <!-- courses section -->
+                <section class="courses-section centered-box">
+                    <h4>Begin your journey at MaxCoach</h4>
+                    <h2>Latest <span>Online Courses</span></h2>
+
+                    <div class="courses-cards-box">
+                        <div class="courses-row-one">
+                            <div class="card" v-for="cardInfo in courses[0]">
+                                <div class="img-box">
+                                    <img v-bind:src="cardInfo.img" alt="">
+                                </div>
+                                     
+                                <div class="course-info">
+                                    <span class="costo">${{cardInfo.costo}}</span>
+                                    <h3 class="testo">{{cardInfo.testo}}</h3>
+                                    <div class="lesson-students-box">
+                                        <div>
+                                            <i class="far fa-file-alt"></i>
+                                            <span>{{cardInfo.lezioni}}</span>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div>
+                                            <i class="far fa-user"></i>
+                                            <span>{{cardInfo.studenti}}</span>
+                                            <span>Students</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="courses-row-two">
+                            <div class="card" v-for="cardInfo in courses[1]">
+                                <div class="img-box">
+                                    <img v-bind:src="cardInfo.img" alt="">
+                                </div>
+                            
+                                <div class="course-info">
+                                    <span class="costo">${{cardInfo.costo}}</span>
+                                    <h3 class="testo">{{cardInfo.testo}}</h3>
+                                    <div class="lesson-students-box">
+                                        <div>
+                                            <i class="far fa-file-alt"></i>
+                                            <span>{{cardInfo.lezioni}}</span>
+                                            <span>Lessons</span>
+                                        </div>
+                                        <div>
+                                            <i class="far fa-user"></i>
+                                            <span>{{cardInfo.studenti}}</span>
+                                            <span>Students</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button>View all courses <i class="fas fa-long-arrow-alt-right"></i></button>
+                </section>
+
+                <!-- books/collaboration section -->
+                <section>
+
+                </section>
+
+                <!-- what they say section -->
+                <section>
+
+                </section>
+
+                <!-- articles section -->
+                <section>
+
+                </section>
             </main>
 
             <!-- FOOTER -->

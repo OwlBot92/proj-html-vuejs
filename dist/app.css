@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Colors */
+/* font */
+/* color cube */
+/* median cut */
+/* material design */
+/* font family */
+/* font size */
 li {
   list-style: none;
 }
@@ -26,6 +33,23 @@ button {
 
 .pointer {
   cursor: pointer;
+}
+
+button {
+  background-color: #20ac97;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 800;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 4px;
+  transition: 0.3s all;
+}
+button i {
+  margin-left: 5px;
+}
+button:hover {
+  background-color: #3f3a64;
 }
 
 /* Colors */
@@ -125,22 +149,6 @@ header .jumbotron .left-jumbo p {
   line-height: 25px;
   margin-bottom: 30px;
 }
-header .jumbotron .left-jumbo button {
-  background-color: #20ac97;
-  font-family: "Montserrat";
-  font-size: 10px;
-  font-weight: 800;
-  color: white;
-  padding: 12px 35px;
-  border-radius: 4px;
-  transition: 0.3s all;
-}
-header .jumbotron .left-jumbo button i {
-  margin-left: 5px;
-}
-header .jumbotron .left-jumbo button:hover {
-  background-color: #3f3a64;
-}
 header .jumbotron .right-jumbo {
   position: relative;
   overflow: hidden;
@@ -166,7 +174,8 @@ main {
   padding-top: 80px;
   /* stats section */
   /* about section */
-  /* youtube video */
+  /* youtube video section */
+  /* courses section */
 }
 main .stats-section {
   display: flex;
@@ -298,4 +307,103 @@ main .youtube-section .video-presentation h6 #special-char {
   bottom: 0.7px;
   font-weight: 600;
   font-size: 12px;
+}
+main .courses-section {
+  padding-bottom: 20px;
+}
+main .courses-section h4 {
+  font-family: "Montserrat";
+  color: #6b6c6c;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+main .courses-section h2 {
+  font-family: "Playfair Display";
+  font-size: 40px;
+  color: #333333;
+  text-align: center;
+}
+main .courses-section h2 span {
+  color: #20ac97;
+}
+main .courses-section button {
+  display: block;
+  margin: auto;
+}
+main .courses-section .courses-cards-box {
+  padding-bottom: 40px;
+}
+main .courses-section .courses-cards-box .courses-row-one,
+main .courses-section .courses-cards-box .courses-row-two {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+main .courses-section .courses-cards-box .courses-row-one .card,
+main .courses-section .courses-cards-box .courses-row-two .card {
+  width: 31%;
+  min-width: 260px;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .img-box,
+main .courses-section .courses-cards-box .courses-row-two .card .img-box {
+  overflow: hidden;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .img-box img,
+main .courses-section .courses-cards-box .courses-row-two .card .img-box img {
+  width: 100%;
+  margin-bottom: 15px;
+  transition: 1.5s all;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info {
+  padding: 0 15px 15px 15px;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .costo,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .costo {
+  font-family: "Montserrat";
+  color: #20ac97;
+  font-size: 24px;
+  font-weight: 500;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .testo,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .testo {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .lesson-students-box,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .lesson-students-box {
+  display: flex;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .lesson-students-box div,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .lesson-students-box div {
+  margin-right: 15px;
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .lesson-students-box div span,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .lesson-students-box div span {
+  font-family: "Montserrat";
+}
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .lesson-students-box div span,
+main .courses-section .courses-cards-box .courses-row-one .card .course-info .lesson-students-box div i,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .lesson-students-box div span,
+main .courses-section .courses-cards-box .courses-row-two .card .course-info .lesson-students-box div i {
+  color: #6b6c6c;
+  font-size: 12px;
+}
+main .courses-section .courses-cards-box .courses-row-one .card:hover img,
+main .courses-section .courses-cards-box .courses-row-two .card:hover img {
+  transform: scale(1.06) translateY(-5px);
+}
+main .courses-section .courses-cards-box .courses-row-one .card:hover,
+main .courses-section .courses-cards-box .courses-row-two .card:hover {
+  box-shadow: 1px 1px 40px #cccccc;
+  cursor: pointer;
 }
