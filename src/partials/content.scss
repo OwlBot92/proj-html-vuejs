@@ -458,6 +458,93 @@ main{
             }
         }
     }
+
+    /* articles section */
+    .articles-section{
+        margin-bottom: 80px;
+        h4{
+            text-transform: uppercase;
+            color: $cordouray;
+            font-family: $sans-serif-mont;
+            font-weight: 600;
+            font-size: $f-size-small;
+        }
+        h2{
+            margin-top: 15px;
+            margin-bottom: 45px;
+            font-family: $serif-playfair;
+            font-size: $f-size-extraLarge;
+            font-weight: 500;
+            span{
+                color: $mountain-meadow;
+            }
+        }
+        a{
+            display: block;
+            font-size: $f-size-small;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-family: $sans-serif-mont;
+            font-weight: 600;
+            color: $mountain-meadow;
+            text-align: center;
+            padding-top: 45px;
+            cursor: pointer;
+        }
+
+        .articles-cards-box{
+            
+            display: flex;
+            cursor: pointer;
+            gap: 25px; //N.B. 70% supported
+            .article-card{
+                width: 25%;
+                height: 100%;
+                overflow: hidden;
+                i{
+                    color: $cordouray;
+                }
+                span{
+                    color: $cordouray;
+                    font-family: $sans-serif-mont;
+                    font-size: $f-size-small;
+                }
+                h3{
+                    color: $dark-grey;
+                    font-family: $sans-serif-mont;
+                    font-weight: 600;
+                    line-height: 30px;
+                    font-size: $f-size-standard;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    &:hover{
+                        color: $mountain-meadow;
+                    }
+                }
+                p{
+                    color: $cordouray;
+                    font-family: $sans-serif-mont;
+                    font-size: $f-size-small;
+                    line-height: 20px;
+                }
+                .article-img-box{
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+                img{
+                    border-radius: 4px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    transition: .8s all;
+                }
+                &:hover img{
+                    transform: scale(1.1) translateY(-7px);
+                }
+            }
+        }
+            
+        
+    }
 }
 
 

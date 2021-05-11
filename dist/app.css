@@ -185,6 +185,7 @@ main {
   /* courses section */
   /* books/collaboration section */
   /* reviews section */
+  /* articles section */
 }
 main .stats-section {
   display: flex;
@@ -630,4 +631,85 @@ main .reviews-section .picker-circle span {
 }
 main .reviews-section .picker-circle img {
   cursor: pointer;
+}
+main .articles-section {
+  margin-bottom: 80px;
+}
+main .articles-section h4 {
+  text-transform: uppercase;
+  color: #6b6c6c;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+}
+main .articles-section h2 {
+  margin-top: 15px;
+  margin-bottom: 45px;
+  font-family: "Playfair Display";
+  font-size: 30px;
+  font-weight: 500;
+}
+main .articles-section h2 span {
+  color: #20ac97;
+}
+main .articles-section a {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #20ac97;
+  text-align: center;
+  padding-top: 45px;
+  cursor: pointer;
+}
+main .articles-section .articles-cards-box {
+  display: flex;
+  cursor: pointer;
+  gap: 25px;
+}
+main .articles-section .articles-cards-box .article-card {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+}
+main .articles-section .articles-cards-box .article-card i {
+  color: #6b6c6c;
+}
+main .articles-section .articles-cards-box .article-card span {
+  color: #6b6c6c;
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+main .articles-section .articles-cards-box .article-card h3 {
+  color: #333333;
+  font-family: "Montserrat";
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+main .articles-section .articles-cards-box .article-card h3:hover {
+  color: #20ac97;
+}
+main .articles-section .articles-cards-box .article-card p {
+  color: #6b6c6c;
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 20px;
+}
+main .articles-section .articles-cards-box .article-card .article-img-box {
+  border-radius: 4px;
+  overflow: hidden;
+}
+main .articles-section .articles-cards-box .article-card img {
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.8s all;
+}
+main .articles-section .articles-cards-box .article-card:hover img {
+  transform: scale(1.1) translateY(-7px);
 }

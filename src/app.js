@@ -59,9 +59,34 @@ var app = new Vue({
                     img: "img/motivation-course-01-480x298.jpg"
                 }
             ]
-        ]
+        ],
     
-        
+        articles: [
+            {
+                img:"img/motivation-blog-04-480x325.jpg",
+                date:"May 13, 2020",
+                title: "How to Stay True to Your Personal Brand",
+                preview: "When it comes to your business or career, you want …",
+            },
+            {
+                img:"img/motivation-blog-03-480x325.jpg",
+                date:"May 13, 2020",
+                title: "5 Vital Lessons in 5 Years of Freelancing",
+                preview: "Being self-employed and working from home, it’s easy to get …",
+            },
+            {
+                img:"img/motivation-blog-02-480x325.jpg",
+                date:"May 13, 2020",
+                title: "11 Super Useful Tips for Small-business Owners",
+                preview: "Being a small-business owner poses a ton of challenges. We …",
+            },
+            {
+                img:"img/motivation-blog-01-480x325.jpg",
+                date:"May 13, 2020",
+                title: "How to Give Yourself Grace to Start Again",
+                preview: "Forgive yourself for bad habits you may have started or …",
+            }
+        ]
     
     
     

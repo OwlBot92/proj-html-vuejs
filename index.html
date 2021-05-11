@@ -303,8 +303,23 @@
                 </section>
 
                 <!-- articles section -->
-                <section>
-
+                <section class="articles-section centered-box">
+                    <h4>Blog updated</h4>
+                    <h2>Interesting <span>articles updated</span> daily</h2>
+                    <div class="articles-cards-box">
+                        <div class="article-card" v-for="obj in articles">
+                            <div class="article-img-box">
+                                <img v-bind:src="obj.img" alt="">
+                            </div>
+                            <div>
+                                <i class="far fa-calendar"></i>
+                                <span>{{obj.date}}</span>
+                                <h3>{{obj.title}}</h3>
+                                <p>{{obj.preview}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">View all Posts</a>
                 </section>
             </main>
 
