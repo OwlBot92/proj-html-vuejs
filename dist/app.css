@@ -19,13 +19,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-
 .centered-box {
   width: 70%;
   margin: auto;
@@ -36,6 +29,9 @@ button {
 }
 
 button {
+  outline: none;
+  border: none;
+  cursor: pointer;
   background-color: #20ac97;
   font-family: "Montserrat";
   font-size: 10px;
@@ -50,6 +46,17 @@ button i {
 }
 button:hover {
   background-color: #3f3a64;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #20ac97;
+}
+
+::selection {
+  color: white;
+  background: #20ac97;
 }
 
 /* Colors */
@@ -176,6 +183,8 @@ main {
   /* about section */
   /* youtube video section */
   /* courses section */
+  /* books/collaboration section */
+  /* reviews section */
 }
 main .stats-section {
   display: flex;
@@ -406,4 +415,145 @@ main .courses-section .courses-cards-box .courses-row-one .card:hover,
 main .courses-section .courses-cards-box .courses-row-two .card:hover {
   box-shadow: 1px 1px 40px #cccccc;
   cursor: pointer;
+}
+main .books-collab-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  /* book section */
+  /* partners section */
+}
+main .books-collab-section .book-sect {
+  display: flex;
+}
+main .books-collab-section .book-sect .product-perks {
+  width: 40%;
+  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .books-collab-section .book-sect .product-perks h3 {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #6b6c6c;
+  font-size: 12px;
+}
+main .books-collab-section .book-sect .product-perks h2 {
+  font-family: "Playfair Display";
+  color: #333333;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 400;
+}
+main .books-collab-section .book-sect .product-perks h2 span {
+  color: #20ac97;
+}
+main .books-collab-section .book-sect .product-perks ul li {
+  margin-bottom: 10px;
+}
+main .books-collab-section .book-sect .product-perks ul li i {
+  color: #20ac97;
+  font-size: 12px;
+  margin-right: 10px;
+}
+main .books-collab-section .book-sect .product-perks ul li span {
+  color: #6b6c6c;
+  font-family: "Montserrat";
+  font-size: 12px;
+}
+main .books-collab-section .book-sect .product-perks button {
+  width: 160px;
+}
+main .books-collab-section .book-sect #book-one,
+main .books-collab-section .book-sect #book-two {
+  cursor: pointer;
+}
+main .books-collab-section .book-sect #book-one .img-circles-box,
+main .books-collab-section .book-sect #book-two .img-circles-box {
+  overflow: hidden;
+  position: relative;
+}
+main .books-collab-section .book-sect #book-one .img-circles-box .hidden-circles,
+main .books-collab-section .book-sect #book-two .img-circles-box .hidden-circles {
+  opacity: 0;
+  transition: 0.4s all;
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+}
+main .books-collab-section .book-sect #book-one .img-circles-box .hidden-circles ul li,
+main .books-collab-section .book-sect #book-two .img-circles-box .hidden-circles ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  background-color: white;
+  box-shadow: 1px 1px 10px lightgrey;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+main .books-collab-section .book-sect #book-one .img-circles-box .hidden-circles ul li:hover,
+main .books-collab-section .book-sect #book-two .img-circles-box .hidden-circles ul li:hover {
+  background-color: #20ac97;
+  color: white;
+}
+main .books-collab-section .book-sect #book-one .img-circles-box img,
+main .books-collab-section .book-sect #book-two .img-circles-box img {
+  width: 100%;
+  transition: 1s all;
+}
+main .books-collab-section .book-sect #book-one .img-circles-box:hover img,
+main .books-collab-section .book-sect #book-two .img-circles-box:hover img {
+  transform: scale(1.12);
+}
+main .books-collab-section .book-sect #book-one .img-circles-box:hover .hidden-circles,
+main .books-collab-section .book-sect #book-two .img-circles-box:hover .hidden-circles {
+  opacity: 1;
+}
+main .books-collab-section .book-sect #book-one h3,
+main .books-collab-section .book-sect #book-two h3 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+main .books-collab-section .book-sect #book-one h4,
+main .books-collab-section .book-sect #book-two h4 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #20ac97;
+  font-size: 20px;
+}
+main .books-collab-section .book-sect #book-one {
+  width: 30%;
+  margin-right: 20px;
+}
+main .books-collab-section .book-sect #book-two {
+  width: 30%;
+}
+main .books-collab-section .collab-sect {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+main .books-collab-section .collab-sect ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .books-collab-section .collab-sect ul li img {
+  filter: saturate(30%);
+  opacity: 40%;
+  transition: 0.2s all;
+}
+main .books-collab-section .collab-sect ul li img:hover {
+  filter: saturate(100%);
+  opacity: 1;
 }

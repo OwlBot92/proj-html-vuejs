@@ -231,4 +231,154 @@ main{
             }
         }
     }
+
+    /* books/collaboration section */
+    .books-collab-section{
+        padding-top: 60px;
+        padding-bottom: 80px;
+
+        /* book section */
+        .book-sect{
+            display: flex;
+            
+            .product-perks{
+                width: 40%;
+                padding-right: 80px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h3{
+                    text-transform: uppercase;
+                    font-family: $sans-serif-mont;
+                    font-weight: 600;
+                    color: $cordouray;
+                    font-size: $f-size-small;
+                }
+                h2{
+                    font-family: $serif-playfair;
+                    color: $dark-grey;
+                    font-size: $f-size-extraLarge;
+                    line-height: 45px;
+                    
+                    font-weight: 400;
+                    span{
+                        color: $mountain-meadow;
+                    }
+                }
+                ul{ 
+                    li{
+                        margin-bottom: 10px;
+                        i{
+                            color: $mountain-meadow;
+                            font-size: $f-size-small;
+                            margin-right: 10px;
+                        }
+                        span{
+                            color: $cordouray;
+                            font-family: $sans-serif-mont;
+                            font-size: $f-size-small;
+                        }
+                    }
+                }
+                button{
+                    width: 160px;
+                }
+            }
+            #book-one,
+            #book-two{
+                cursor: pointer;
+                .img-circles-box{
+                    overflow: hidden;
+                    position: relative;
+                    .hidden-circles{
+                        opacity: 0;
+                        transition: .4s all;
+                        position: absolute;
+                        top: 50%;
+                        right: 6%;
+                        transform: translateY(-50%);
+                        ul{
+                            li{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: $dark-grey;
+                                background-color: white;
+                                box-shadow: 1px 1px 10px lightgrey;
+                                border-radius: 50%;
+                                height: 40px;
+                                width: 40px;
+                                margin-bottom: 10px;
+                                cursor: pointer;
+                                &:hover{
+                                    background-color: $mountain-meadow;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    img{
+                        width: 100%;
+                        transition: 1s all;
+                    }
+                    &:hover img{
+                        transform: scale(1.12);
+                    }
+                    &:hover .hidden-circles{
+                        opacity: 1;
+                    }
+                }
+                h3{
+                    text-align: center;
+                    font-family: $sans-serif-mont;
+                    font-size: $f-size-standard;
+                    font-weight: 600;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+                h4{
+                    text-align: center;
+                    font-family: $sans-serif-mont;
+                    font-weight: 600;
+                    color: $mountain-meadow;
+                    font-size: $f-size-bigger;
+                }
+            }
+            #book-one{
+                width: 30%;
+                margin-right: 20px;
+            }
+            #book-two{
+                width: 30%;
+            }
+        }
+
+        /* partners section */
+        .collab-sect{
+            padding-top:120px;
+            padding-bottom: 100px;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                li{
+                    img{
+                        filter: saturate(30%);
+                        opacity: 40%;
+                        transition: .2s all;
+                        &:hover{
+                            filter: saturate(100%);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* reviews section */
+    .reviews-section{
+        
+    }
 }

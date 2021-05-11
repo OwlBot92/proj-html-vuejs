@@ -9,13 +9,6 @@ a{
     text-decoration: none;
 }
 
-button{
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
 .centered-box{
     width: 70%;
     margin: auto;
@@ -27,6 +20,9 @@ button{
 
 
 button{
+    outline: none;
+    border: none;
+    cursor: pointer;
     background-color: $mountain-meadow;
     font-family: $sans-serif-mont;
     font-size: $f-size-xs;
@@ -41,4 +37,18 @@ button{
     &:hover{
         background-color: #3f3a64;
     }
+}
+
+
+
+
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: $mountain-meadow;
+}
+
+::selection {
+  color: white;
+  background: $mountain-meadow;
 }
