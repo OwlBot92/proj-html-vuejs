@@ -715,22 +715,54 @@ main .articles-section .articles-cards-box .article-card:hover img {
 }
 
 footer {
-  /* test */
-  height: 400px;
   background-color: #141423;
   padding-top: 60px;
-  padding-bottom: 60px;
 }
 footer .footer-section {
   display: flex;
 }
 footer .footer-section .footer-left {
-  background-color: red;
   width: 50%;
 }
+footer .footer-section .footer-left h3 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+footer .footer-section .footer-left div {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-section .footer-left div span {
+  color: #bbbcbd;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+footer .footer-section .footer-left ul {
+  display: flex;
+}
+footer .footer-section .footer-left ul li {
+  font-size: 24px;
+  color: #bbbcbd;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+footer .footer-section .footer-left ul li:hover {
+  color: #20ac97;
+}
 footer .footer-section .footer-center {
-  background-color: blue;
   width: 30%;
+}
+footer .footer-section .footer-center h3 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 footer .footer-section .footer-center ul {
   display: flex;
@@ -742,11 +774,24 @@ footer .footer-section .footer-center ul li {
   width: 50%;
 }
 footer .footer-section .footer-center ul li a {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #bbbcbd;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+}
+footer .footer-section .footer-center ul li a:hover {
+  color: #20ac97;
 }
 footer .footer-section .footer-right {
-  background-color: green;
   width: 20%;
+}
+footer .footer-section .footer-right h3 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 footer .footer-section .footer-right ul {
   display: flex;
@@ -757,5 +802,21 @@ footer .footer-section .footer-right ul li {
   flex-direction: column;
 }
 footer .footer-section .footer-right ul li a {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #bbbcbd;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+}
+footer .footer-section .footer-right ul li a:hover {
+  color: #20ac97;
+}
+footer .rights-reserved {
+  color: #bbbcbd;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 40px;
 }

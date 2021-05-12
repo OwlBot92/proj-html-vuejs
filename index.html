@@ -285,10 +285,10 @@
                 <section class="reviews-section">
                     <div class="left-rev-side">
                         <h4>Real Stories</h4>
-                        <p>I am free to learn at my own pace,follow my own schedule and choose the subject i want to learn from the syllabus. Great study portal for people like me.</p>
-                        <img src="img/testimonial-avata-02.jpg" alt="">
-                        <h3>Mina Hollace</h3>
-                        <h5>/ Freelancer</h5>
+                        <p>{{realStories[index].text}}</p>
+                        <img v-bind:src="realStories[index].img" alt="">
+                        <h3>{{realStories[index].name}}</h3>
+                        <h5>{{realStories[index].job}}</h5>
                     </div>
 
                     <div class="right-rev-side">
@@ -296,9 +296,9 @@
                     </div>
 
                     <div class="picker-circle">
-                        <img src="img/image.png" alt="">
-                        <span>1/4</span>
-                        <img src="img/image (1).png" alt="">
+                        <img src="img/image.png" alt="" v-on:click="clickNext()">
+                        <span>{{index + 1}}/{{realStories.length}}</span>
+                        <img src="img/image (1).png" alt="" v-on:click="clickPrev()">
                     </div>
                 </section>
 
@@ -328,7 +328,11 @@
                 <div class="footer-section centered-box">
                     <div class="footer-left">
                         <h3>Address</h3>
-                        <p></p>
+                        <div>
+                            <span>382 NE 191st St # 87394 Miami, FL 33179-3899</span>
+                            <span>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</span>
+                            <span>support@maxcoach.com</span>
+                        </div>
                         <ul>
                             <li class="pointer"><i class="fab fa-twitter social-icon"></i></li>
                             <li class="pointer"><i class="fab fa-facebook-f social-icon"></i></li>
@@ -338,19 +342,13 @@
                     </div>
                     <div class="footer-center">
                         <h3>Explore</h3>
-
-                        <!-- da fare con vue -->
                         <ul>
                             <li class="left-li">
-                                <a href="">Start here</a>
-                                <a href="">Blog</a>
-                                <a href="">About Us</a>
+                                <a href=""v-for="link in footerLinks[0]">{{link}}</a>
                             </li>
 
                             <li class="right-li">
-                                <a href="">Success story</a>
-                                <a href="">Courses</a>
-                                <a href="">Contact Us</a>
+                                <a href="" v-for="link in footerLinks[1]">{{link}}</a>
                             </li>
                         </ul>
                     </div>
@@ -358,16 +356,13 @@
                         <h3>Information</h3>
                         <ul>
                             <li class="right-li">
-                                <a href="">membership</a>
-                                <a href="">Purchase guide</a>
-                                <a href="">Privacy policy</a>
-                                <a href="">Terms of service</a>
+                                <a href="" v-for="link in footerLinks[2]">{{link}}</a>
                             </li>
                         </ul>
                     </div>
 
-                    <h6>C 2020 Maxcoach. All Rights Reserved</h6>
                 </div>
+                <h6 class="rights-reserved"><i class="far fa-copyright"></i> 2020 Maxcoach. All Rights Reserved</h6>
             </footer>
 
         </div>

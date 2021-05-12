@@ -1,24 +1,54 @@
 footer{
-        /* test */
-    height: 400px;
-
     background-color: $vulcan;
     padding-top: 60px;
-    padding-bottom: 60px;
+    
     
     .footer-section{
         display: flex;
         .footer-left{
-            background-color: red;
-    
             width: 50%;
+            h3{
+                color: white;
+                font-family: $sans-serif-mont;
+                font-size: $f-size-standard;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                span{
+                    color: $silver-sand;
+                    font-family: $sans-serif-mont;
+                    font-size: $f-size-small;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+            }
+            ul{
+                display: flex;
+                li{
+
+                    font-size: $f-size-large;
+                    color: $silver-sand;
+                    margin-top: 15px;
+                    margin-right: 20px;
+                    &:hover{
+                        color: $mountain-meadow;
+                    }
+                }
+            }
         }
     
         .footer-center{
-            background-color: blue;
-    
             width: 30%;
-
+            h3{
+                color: white;
+                font-family: $sans-serif-mont;
+                font-size: $f-size-standard;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
             ul{
                 display: flex;
                 padding-top: 10px;
@@ -27,17 +57,28 @@ footer{
                     flex-direction: column;
                     width: 50%;
                     a{
-                        margin-bottom: 10px;
+                        margin-bottom: 15px;
+                        color: $silver-sand;
+                        font-family: $sans-serif-mont;
+                        font-size: $f-size-small;
+                        font-weight: 600;
+                        &:hover{
+                            color: $mountain-meadow;
+                        }
                     }
                 }
             }
         }
     
         .footer-right{
-            background-color: green;
-            
             width: 20%;
-
+            h3{
+                color: white;
+                font-family: $sans-serif-mont;
+                font-size: $f-size-standard;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
             ul{
                 display: flex;
                 padding-top: 10px;
@@ -45,10 +86,26 @@ footer{
                     display: flex;
                     flex-direction: column;
                     a{
-                        margin-bottom: 10px;
+                        margin-bottom: 15px;
+                        color: $silver-sand;
+                        font-family: $sans-serif-mont;
+                        font-size: $f-size-small;
+                        font-weight: 600;
+                        &:hover{
+                            color: $mountain-meadow;
+                        }
                     }
                 }
             }
         }
+    }
+    .rights-reserved{
+        color: $silver-sand;
+        font-family: $sans-serif-mont;
+        font-size: $f-size-xs;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 50px;
+        padding-bottom: 40px;
     }
 }

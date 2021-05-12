@@ -72,9 +72,39 @@ var app = new Vue({
       date: "May 13, 2020",
       title: "How to Give Yourself Grace to Start Again",
       preview: "Forgive yourself for bad habits you may have started or …"
+    }],
+    footerLinks: [["Start here", "Blog", "About Us"], ["Success story", "Courses", "Contact Us"], ["Membership", "Purchase guide", "Privacy policy", "Terms of service"]],
+    index: 0,
+    realStories: [{
+      text: "I am free to learn at my own pace,follow my own schedule and choose the subject i want to learn from the syllabus. Great study portal for people like me.",
+      img: "img/testimonial-avata-02.jpg",
+      name: "Mina Hollace",
+      job: "/ Freelancer"
+    }, {
+      text: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.",
+      img: "img/testimonial-avata-04.jpg",
+      name: "Madley Pondor",
+      job: "/ IT Specialist"
+    }, {
+      text: "I am happy with their arrangement of lessons and subject. They reflect a scientific inestigation into effective methods to adopt for learners",
+      img: "img/testimonial-avata-01.jpg",
+      name: "Luvic Dubble",
+      job: "/ Private Tutor"
+    }, {
+      text: "I'm a very strict person so i require everything to be organized and neat. Then, i'll be able to make things right and shine. MaxCoach guys just got me.",
+      img: "img/testimonial-avata-03.jpg",
+      name: "Florence Themes",
+      job: "/ Multimedia Admin"
     }]
   },
-  methods: {}
+  methods: {
+    clickNext: function clickNext() {
+      this.index == 3 ? this.index = 0 : this.index++;
+    },
+    clickPrev: function clickPrev() {
+      this.index == 0 ? this.index = 3 : this.index--;
+    }
+  }
 });
 
 /***/ }),
