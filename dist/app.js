@@ -74,7 +74,10 @@ var app = new Vue({
       preview: "Forgive yourself for bad habits you may have started or …"
     }],
     footerLinks: [["Start here", "Blog", "About Us"], ["Success story", "Courses", "Contact Us"], ["Membership", "Purchase guide", "Privacy policy", "Terms of service"]],
+    animated: false,
+    //per prevenire spam click
     index: 0,
+    fade: "",
     realStories: [{
       text: "I am free to learn at my own pace,follow my own schedule and choose the subject i want to learn from the syllabus. Great study portal for people like me.",
       img: "img/testimonial-avata-02.jpg",
@@ -99,10 +102,79 @@ var app = new Vue({
   },
   methods: {
     clickNext: function clickNext() {
-      this.index == 3 ? this.index = 0 : this.index++;
+      var _this = this;
+
+      //prevent spam click
+      if (this.animated) {
+        return;
+      } //se animated è false lo setta su true
+
+
+      this.animated = true; //se è l'ultimo dell elenco 
+
+      if (this.index == 3) {
+        this.fade = "fade-out";
+        setTimeout(function () {
+          _this.fade = "fade-in"; //riparte dal primo
+
+          _this.index = 0;
+        }, 700);
+        setTimeout(function () {
+          _this.fade = "";
+          _this.animated = false;
+        }, 1400);
+      } //altrimenti prosegue con lo scorrimento
+      else {
+          //animazione fade out nel tempo ZERO
+          this.fade = "fade-out"; //dura 800ms
+          //dopo 700 ms animazione di fade in
+
+          setTimeout(function () {
+            _this.fade = "fade-in";
+            _this.index++;
+          }, 700); //dopo 1400 ms setta fade su stringa vuota e animated false perchè l'animazione è finita
+
+          setTimeout(function () {
+            _this.fade = "";
+            _this.animated = false;
+          }, 1400);
+        }
     },
     clickPrev: function clickPrev() {
-      this.index == 0 ? this.index = 3 : this.index--;
+      var _this2 = this;
+
+      //prevent spam click
+      if (this.animated) {
+        return;
+      }
+
+      this.animated = true;
+
+      if (this.index == 0) {
+        setTimeout(function () {
+          _this2.fade = "fade-out";
+        }, 0);
+        setTimeout(function () {
+          _this2.fade = "fade-in";
+          _this2.index = 3;
+        }, 700);
+        setTimeout(function () {
+          _this2.fade = "";
+          _this2.animated = false;
+        }, 1400);
+      } else {
+        setTimeout(function () {
+          _this2.fade = "fade-out";
+        }, 0);
+        setTimeout(function () {
+          _this2.fade = "fade-in";
+          _this2.index--;
+        }, 700);
+        setTimeout(function () {
+          _this2.fade = "";
+          _this2.animated = false;
+        }, 1400);
+      }
     }
   }
 });

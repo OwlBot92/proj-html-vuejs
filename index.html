@@ -283,12 +283,18 @@
 
                 <!-- what they say section -->
                 <section class="reviews-section">
+                    
                     <div class="left-rev-side">
                         <h4>Real Stories</h4>
-                        <p>{{realStories[index].text}}</p>
-                        <img v-bind:src="realStories[index].img" alt="">
-                        <h3>{{realStories[index].name}}</h3>
-                        <h5>{{realStories[index].job}}</h5>
+                        
+                        
+                        <div v-bind:class="fade">
+                            <p class="">{{realStories[index].text}}</p>
+                            <img  class="" v-bind:src="realStories[index].img" alt="">
+                            <h3 class="">{{realStories[index].name}}</h3>
+                            <h5 class="">{{realStories[index].job}}</h5>        
+                        </div>
+                        
                     </div>
 
                     <div class="right-rev-side">
