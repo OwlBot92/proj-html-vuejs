@@ -160,6 +160,7 @@ var app = new Vue({
       var _this2 = this;
 
       if (this.index == 0) {
+        this.indexToShow = 4;
         this.fade = "fade-out";
         setTimeout(function () {
           _this2.fade = "fade-in";
@@ -170,6 +171,7 @@ var app = new Vue({
           _this2.animated = false;
         }, s2);
       } else {
+        this.indexToShow--;
         this.fade = "fade-out";
         setTimeout(function () {
           _this2.fade = "fade-in";

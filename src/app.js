@@ -161,7 +161,7 @@ var app = new Vue({
             this.timedPrevTimeout(700, 1400);
         },
 
-        
+
         timedNextTimeout(s1, s2){
             //se è l'ultimo dell elenco 
             if (this.index == 3) {
@@ -198,24 +198,26 @@ var app = new Vue({
 
         timedPrevTimeout(s1, s2){
             if (this.index == 0) {
+                this.indexToShow = 4;
                 this.fade = "fade-out";
                 setTimeout(() => {
                     this.fade = "fade-in";
                     this.index = 3;
                 }, s1);
                 setTimeout(() => {
-                    this.fade = ""
+                    this.fade = "";
                     this.animated = false;
                 }, s2);
             }
             else {
+                this.indexToShow --;
                 this.fade = "fade-out";
                 setTimeout(() => {
                     this.fade = "fade-in";
                     this.index--;
                 }, s1);
                 setTimeout(() => {
-                    this.fade = ""
+                    this.fade = "";
                     this.animated = false;
                 }, s2);
             }
