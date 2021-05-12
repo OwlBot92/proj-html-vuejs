@@ -107,10 +107,12 @@ var app = new Vue({
             ]
         ],
         
+
+        // data realStories
         animated: false, //per prevenire spam click
         index: 0,
+        indexToShow: 1,
         fade: "",
-        
         realStories : [
             {   
                 text: "I am free to learn at my own pace,follow my own schedule and choose the subject i want to learn from the syllabus. Great study portal for people like me.",
@@ -147,36 +149,7 @@ var app = new Vue({
             }
             //se animated è false lo setta su true
             this.animated = true;
-            //se è l'ultimo dell elenco 
-            if (this.index == 3){        
-                this.fade = "fade-out";
-                setTimeout(() => {
-                    this.fade = "fade-in";
-                    //riparte dal primo
-                    this.index = 0;
-                }, 700);
-                setTimeout(() => {
-                    this.fade = ""
-                    this.animated = false;
-                }, 1400);
-            }
-
-            //altrimenti prosegue con lo scorrimento
-            else{
-                //animazione fade out nel tempo ZERO
-                this.fade = "fade-out"; //dura 800ms
-                //dopo 700 ms animazione di fade in
-                setTimeout(() => {
-                    this.fade = "fade-in";
-                    this.index++;
-                }, 700);
-                //dopo 1400 ms setta fade su stringa vuota e animated false perchè l'animazione è finita
-                setTimeout(() => {
-                    this.fade = ""
-                    this.animated = false;
-                }, 1400); 
-            }
-            
+            this.timedNextTimeout(700, 1400);
         },
 
         clickPrev(){
@@ -185,34 +158,67 @@ var app = new Vue({
                 return;
             }
             this.animated = true;
-            if (this.index == 0) {
+            this.timedPrevTimeout(700, 1400);
+        },
+
+        
+        timedNextTimeout(s1, s2){
+            //se è l'ultimo dell elenco 
+            if (this.index == 3) {
+                this.indexToShow = 1;
+                this.fade = "fade-out";
                 setTimeout(() => {
-                    this.fade = "fade-out";
-                }, 0);
+                    this.fade = "fade-in";
+                    //riparte dal primo
+                    this.index = 0;
+                }, s1);
+                setTimeout(() => {
+                    this.fade = ""
+                    this.animated = false;
+                }, s2);
+            }
+            //altrimenti prosegue con lo scorrimento
+            else {
+                this.indexToShow++;
+                //animazione fade out nel tempo ZERO
+                this.fade = "fade-out"; //dura 800ms
+                //dopo 700 ms animazione di fade in
+                setTimeout(() => {
+                    this.fade = "fade-in";
+                    this.index++;
+                }, s1);
+                //dopo 1400 ms setta fade su stringa vuota e animated false perchè l'animazione è finita
+                setTimeout(() => {
+                    this.fade = ""
+                    this.animated = false;
+                }, s2);
+            }
+        },
+
+
+        timedPrevTimeout(s1, s2){
+            if (this.index == 0) {
+                this.fade = "fade-out";
                 setTimeout(() => {
                     this.fade = "fade-in";
                     this.index = 3;
-                }, 700);
+                }, s1);
                 setTimeout(() => {
                     this.fade = ""
                     this.animated = false;
-                }, 1400);
+                }, s2);
             }
             else {
-                setTimeout(() => {
-                    this.fade = "fade-out";
-                }, 0);
+                this.fade = "fade-out";
                 setTimeout(() => {
                     this.fade = "fade-in";
                     this.index--;
-                }, 700);
+                }, s1);
                 setTimeout(() => {
                     this.fade = ""
                     this.animated = false;
-                }, 1400);
+                }, s2);
             }
-
         }
-
     },
 });
