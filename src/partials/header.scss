@@ -4,11 +4,11 @@ header{
     background-color: $amour;
     background-image: url("../img/background-pattern-wavify.png");
     overflow: hidden;
-    
+    height: 100vh;
     /* nav */
     nav{
         @include flex-between;
-        padding: 10px 0;
+        padding: 15px 0;
         .nav-logo-link{
             width: 20%;
             img{
@@ -32,10 +32,14 @@ header{
                 @include flex-between;
                 li{
                     @include flex-center;
+                    &:hover span,
+                    &:hover .fa-chevron-down{
+                        color: $mountain-meadow;
+                    }
                     span{
                         font-family: $sans-serif-mont, sans-serif;
                         color: $blue-j;
-                        font-size: $f-size-small;
+                        font-size: $f-size-small-standard;
                         font-weight: 600;
                         margin-right: 4px;
                     }
@@ -45,7 +49,10 @@ header{
                     }
                     .social-icon{
                         color: $dark-grey;
-                        font-size: $f-size-standard;
+                        font-size: $f-size-big;
+                        &:hover{
+                            color: $mountain-meadow;
+                        }
                     }
                 }
             }
@@ -54,28 +61,33 @@ header{
 
     /* jumbotron */
     .jumbotron{
+        
         display: flex;
+        align-items: center;
         position: relative;
+        height: 100%;
         .left-jumbo{
             width: 40%;
-            padding-bottom: 80px;
-            padding-top: 40px;
+            
             h6 {
                 font-family: $sans-serif-mont;
                 color: $dark-grey;
+                font-size: $f-size-standard;
                 font-weight: 600;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
             h1{
                 font-family: $serif-playfair;
-                font-size: $f-size-extraExtraLarge;
+                font-size: 50px;
                 color: $dark-grey;
+                font-weight: 400;
+                line-height: 70px;
                 margin-bottom: 20px;
             }
             p{
                 font-family: $sans-serif-mont;
-                font-size: $f-size-small;
-                color: $dark-grey;
+                font-size: $f-size-small-standard;
+                color: $cordouray;
                 font-weight: 500;
                 line-height: 25px;
                 margin-bottom: 30px;
@@ -83,24 +95,23 @@ header{
         }
 
         .right-jumbo{
+            
             position: relative;
-            overflow: hidden;
-            height: 500px;
+            height: 100%;
             width: 60%;
             #hero-img{
+                
                 position: absolute;
                 bottom: 0;
-                width: 60%;
-                right: 10%;
-                max-width: 360px;
-                min-width: 300px;
-            }
-            #shape-face{
-                position: absolute;
-                width: 65%;
-                right: 0%;
-                bottom: -8%;
+                width: 80%;
+                right: 0;
             }
         }
+  
+    }
+    #shape-face{
+        position: absolute;
+        width: 85%;
+        pointer-events: none;
     }
 }

@@ -234,16 +234,15 @@ main{
 
     /* books/collaboration section */
     .books-collab-section{
+        
         padding-top: 60px;
         padding-bottom: 60px;
-
         /* book section */
         .book-sect{
             display: flex;
             
             .product-perks{
                 width: 40%;
-                padding-right: 80px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -252,12 +251,12 @@ main{
                     font-family: $sans-serif-mont;
                     font-weight: 600;
                     color: $cordouray;
-                    font-size: $f-size-small;
+                    font-size: $f-size-standard;
                 }
                 h2{
                     font-family: $serif-playfair;
                     color: $dark-grey;
-                    font-size: $f-size-extraLarge;
+                    font-size: $f-size-extraExtraLarge;
                     line-height: 45px;
                     
                     font-weight: 400;
@@ -281,7 +280,8 @@ main{
                     }
                 }
                 button{
-                    width: 160px;
+                    padding: 18px 30px;
+                    width: 200px;
                 }
             }
             #book-one,
@@ -546,3 +546,23 @@ main{
 }
 
 
+.absolute-mini-nav{
+    background-color: white;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    width: 38px;
+    height: 155px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 20px rgb(218, 218, 218);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    i{
+        color: $dark-grey;
+        cursor: pointer;
+    }
+}

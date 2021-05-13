@@ -100,9 +100,18 @@ var app = new Vue({
       img: "img/testimonial-avata-03.jpg",
       name: "Florence Themes",
       job: "/ Multimedia Admin"
-    }]
+    }],
+    //per l'evento onMouseMove
+    page: {
+      left: 0,
+      top: 0
+    }
   },
   methods: {
+    onMouseMove: function onMouseMove(e) {
+      this.page.left = e.pageX;
+      this.page.top = e.pageY;
+    },
     clickNext: function clickNext() {
       //prevent spam click
       if (this.animated) {

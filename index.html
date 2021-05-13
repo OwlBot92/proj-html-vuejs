@@ -32,7 +32,7 @@
         <!-- VUE ROOT -->
         <div id="root">
             <!-- HEADER -->
-            <header>
+            <header v-on:mousemove="onMouseMove(event)">
                 <!-- NAV -->
                 <nav class="centered-box">
                     <!-- logo box -->
@@ -62,21 +62,19 @@
                     </div>
                 </nav>
 
-                <div class="jumbotron centered-box">
-                    <div class="left-jumbo">
-                        <h6>I'M WINGMAN</h6>
-                        <h1>Peace On Earth A Wonderful Wish But No Way</h1>
-                        <p>Success isn't overnight. It's when everyday you get a little better than the day before. It all adds up</p>
-                        <button>Get Started For Free <i class="fas fa-long-arrow-alt-right"></i></button>
+                <div class="jumbotron centered-box" v-on:mousemove="onMouseMove(event)">
+                    <div class="left-jumbo" v-on:mousemove="onMouseMove(event)">
+                        <h6 v-on:mousemove="onMouseMove(event)">I'M WINGMAN</h6>
+                        <h1 v-on:mousemove="onMouseMove(event)">Peace On Earth A Wonderful Wish But No Way</h1>
+                        <p v-on:mousemove="onMouseMove(event)">Success isn't overnight. It's when everyday you get a little better than the day before. It all adds up</p>
+                        <button v-on:mousemove="onMouseMove(event)">Get Started For Free <i class="fas fa-long-arrow-alt-right"></i></button>
                     </div>
                     
-                    <div class="right-jumbo">
-                        <img id="shape-face" src="img/home-movation-shape-face.png" alt="">
-                        <img id="hero-img" src="img/home-movation-hero-image.png" alt="">
+                    <div class="right-jumbo" v-on:mousemove="onMouseMove(event)">
+                        <img id="shape-face" src="img/home-movation-shape-face.png" alt="" :style="{left: (-page.left + 2400)/10 + 'px', top: (-page.top + 3000)/10 +'px'}">
+                        <img id="hero-img" speed="5" src="img/home-movation-hero-image.png" alt="" v-on:mousemove="onMouseMove(event)">
                     </div>
                 </div>
-
-                
             </header>
 
 
@@ -210,7 +208,7 @@
                         <!-- about the store -->
                         <div class="product-perks">
                             <h3>Book store online</h3>
-                            <h2>Be Alpha With <span>Wingman's Book</span></h2>
+                            <h2>Be Alpha With <br><span>Wingman's Book</span></h2>
                             <ul>
                                 <li>
                                     <i class="fas fa-check"></i>
@@ -369,10 +367,23 @@
 
                 </div>
                 <h6 class="rights-reserved"><i class="far fa-copyright"></i> 2020 Maxcoach. All Rights Reserved</h6>
+
+                <a class="b-t-link" href="#top">
+                    <div class="back-to-top">
+                        <i class="fas fa-long-arrow-alt-up"></i>
+                    </div>
+                </a>
             </footer>
 
         </div>
         
+        <div class="absolute-mini-nav">
+            <i class="fas fa-ruler-combined"></i>
+            <i class="far fa-life-ring"></i>
+            <i class="fas fa-book"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+
         <script src="dist/app.js"></script>
     </body>
 

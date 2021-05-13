@@ -1,5 +1,8 @@
 @import "variables";
 
+html{
+    scroll-behavior: smooth;
+}
 
 li{
     list-style: none;
@@ -10,7 +13,7 @@ a{
 }
 
 .centered-box{
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -25,10 +28,10 @@ button{
     cursor: pointer;
     background-color: $mountain-meadow;
     font-family: $sans-serif-mont;
-    font-size: $f-size-xs;
+    font-size: $f-size-small;
     font-weight: 800;
     color: white;
-    padding: 12px 35px;
+    padding: 18px 55px;
     border-radius: 4px;
     transition: .3s all;
     i{
@@ -36,41 +39,6 @@ button{
     }
     &:hover{
         background-color: #3f3a64;
-    }
-}
-
-
-
-.fade-in{
-    opacity: 1;
-    animation-name: goIn;
-    animation-duration: .8s;
-}
-
-
-@keyframes goIn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-
-.fade-out{
-    opacity: 1;
-    animation-name: goOut;
-    animation-duration: .8s;
-}
-
-
-@keyframes goOut{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
     }
 }
 

@@ -1,0 +1,31 @@
+
+.fade-in{
+    opacity: 1;
+    animation-name: goIn;
+    animation-duration: .8s;
+}
+
+
+@keyframes goIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fade-out{
+    opacity: 1;
+    animation-name: goOut;
+    animation-duration: .8s;
+}
+
+@keyframes goOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

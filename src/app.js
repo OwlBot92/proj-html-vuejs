@@ -1,6 +1,8 @@
 var app = new Vue({
     el: '#root',
     data: {
+
+        
         navList : [
             "Home",
             "Pages",
@@ -138,10 +140,20 @@ var app = new Vue({
                 name: "Florence Themes",
                 job: "/ Multimedia Admin"
             }
-        ]
+        ],
 
+        //per l'evento onMouseMove
+        page:{
+            left: 0,
+            top: 0,
+        }
     },
     methods: {
+        onMouseMove(e){
+            this.page.left = e.pageX;
+            this.page.top = e.pageY;
+        },
+
         clickNext(){
             //prevent spam click
             if (this.animated) {
@@ -151,7 +163,6 @@ var app = new Vue({
             this.animated = true;
             this.timedNextTimeout(700, 1400);
         },
-
         clickPrev(){
             //prevent spam click
             if (this.animated) {
@@ -160,8 +171,6 @@ var app = new Vue({
             this.animated = true;
             this.timedPrevTimeout(700, 1400);
         },
-
-
         timedNextTimeout(s1, s2){
             //se è l'ultimo dell elenco 
             if (this.index == 3) {
@@ -194,8 +203,6 @@ var app = new Vue({
                 }, s2);
             }
         },
-
-
         timedPrevTimeout(s1, s2){
             if (this.index == 0) {
                 this.indexToShow = 4;
@@ -224,3 +231,6 @@ var app = new Vue({
         }
     },
 });
+
+
+
